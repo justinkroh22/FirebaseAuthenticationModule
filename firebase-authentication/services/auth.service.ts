@@ -11,15 +11,9 @@ export class AuthService {
 
   constructor(private router: Router, private afAuth: AngularFireAuth) { }
 
-  isLoggedIn(): Observable<any> {
+  isLoggedIn$: Observable<any> = this.afAuth.user;
 
-    return this.afAuth.user;
-  }
-
-  getToken(): Observable<String | null> {
-
-    return this.afAuth.idToken;
-  }
+  userToken$: Observable<String | null> = this.afAuth.idToken;
 
   login(): void {
     this.router.navigate(['/']);

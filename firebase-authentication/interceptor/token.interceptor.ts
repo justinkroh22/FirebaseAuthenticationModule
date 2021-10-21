@@ -19,7 +19,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
-    return this.authService.getToken().pipe(
+    return this.authService.userToken$.pipe(
         mergeMap((token: String | null | undefined) => {
             
             if (token) {
