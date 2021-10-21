@@ -8,6 +8,11 @@ Firebase-Angular-UI +  AngularFireAuth module contains core features to get Fire
     "firebaseui": "^4.8.0",
     "firebaseui-angular": "^5.1.3",
     
+1A. Add Firebase UI CSS to AngularJson file
+
+    "node_modules/firebaseui/dist/firebaseui.css",
+
+    
 2. Copy Paste In Project
 
 3. In App Module import the FirebaseAuthenticationModule and the AngularFireModule with your Firebase Configuration
